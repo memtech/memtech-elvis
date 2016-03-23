@@ -9,5 +9,5 @@
   "hubot-redis-brain",
   "hubot-rules",
   "hubot-shipit",
-  "hubot-slack-whitelist-middelware"
+  "hubot-slack-whitelist-middleware"
 ]
