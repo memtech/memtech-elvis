@@ -58,13 +58,13 @@ result = [
   "it's perfect.",
   "does such a terrible job that he leaves his family out of shame.",
   "does such a great job he writes a song about it.",
-  "does so poorly that he get'''s slapped by the colonel"
+  "does so poorly that he gets slapped by the colonel"
 ]
 
-doTrick = -> "attempts " + 
+doTrick = -> "_attempts " + 
              description[random(0,description.length-1)] + " " + 
              trick[random(0,trick.length-1)] + " and " + 
-             result[random(0,result.length-1)]
+             result[random(0,result.length-1)] + "_"
 
 module.exports = (robot) ->
   robot.respond /do a (trick|barrel roll)/i, (msg) ->
