@@ -7,5 +7,6 @@
   "hubot-redis-brain",
   "hubot-rules",
   "hubot-slack-whitelist-middleware",
-  "hubot-mimic"
+  "hubot-mimic",
+  "hubot-markov"
 ]
