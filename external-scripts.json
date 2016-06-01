@@ -8,5 +8,6 @@
   "hubot-rules",
   "hubot-slack-whitelist-middleware",
   "hubot-mimic",
-  "hubot-markov"
+  "hubot-markov",
+  "hubot-youtube"
 ]
