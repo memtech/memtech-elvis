@@ -20,6 +20,7 @@
     "hubot-scripts": "^2.16.2",
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^3.4.2",
+    "hubot-slack-blacklist-middleware": "^1.0.2",
     "hubot-slack-whitelist-middleware": "^1.0.1",
     "hubot-youtube": "^1.0.2",
     "moment": "^2.12.0"
