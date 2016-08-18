@@ -26,9 +26,9 @@ fusRoDah = (count) ->
   rando = Math.floor(Math.random() * 3)
   response = ""
   failWhale = [
-    "that sucks, you need like x more dragon ballz",
-    "sorry, but yer gonna need x more dbz",
-    "oooohhh, bummer... looks like you need x more ballz"
+    "that sucks, you need like ballCount more dragon ballz",
+    "sorry, but yer gonna need ballCount more dbz",
+    "oooohhh, bummer... looks like you need ballCount more ballz"
   ]
   successBaby = [
     "It looks like you've got all the dragon ballz there so I don't see why not. Wish granted.",
@@ -41,16 +41,17 @@ fusRoDah = (count) ->
   else
     response = failWhale[rando]
 
-    if count == 1
+    if 7 - count == 1
       #todo trim z from end of string
-      response += ""
+      response = response.slice(0, -1);
 
     #todo string replace number of balls
+    response = response.replace( /ballCount/, 7 - count )
 
   response
 
 grantWish = ->
-  balls = collectBalls        #how many balls are we working with here?
+  balls = collectBalls()        #how many balls are we working with here?
   ballSack = sackBalls(balls) #emoji string
   response = fusRoDah(balls)  #what does the dragon say? (ring ding ding...)
   wish = ""
