@@ -41,7 +41,7 @@ fusRoDah = (count) ->
   else
     response = failWhale[rando]
 
-    if balls == 1
+    if count == 1
       #todo trim z from end of string
       response += ""
 
