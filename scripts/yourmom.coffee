@@ -18,7 +18,7 @@ module.exports = (robot) ->
 	robot.hear /^([ \w]* )(is|was) ([ \w]+)[\.!]?$/, (message) ->
 		lower = message.match[1].toLowerCase()
 		if lower.indexOf("your mom") < 0 and lower.indexOf("how") < 0 and lower.indexOf("why") < 0 and lower.indexOf("wtf") < 0 and lower.indexOf("when") < 0 and lower.indexOf("where") < 0
-			yourFace = ":fu: Your mom " + message.match[2] + " " + message.match[3]
+			yourFace = "Your mom " + message.match[2] + " " + message.match[3]
 			lastYourFace[(message.message.user.name + '').toLowerCase()] = yourFace
 			if Math.random() <= (percent / 100.0)
 				setTimeout (->
