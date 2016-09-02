@@ -65,7 +65,7 @@ module.exports = (robot) ->
         template_id: 101470
       },
       {
-        regex: /show me a hipster ()/i,
+        regex: /(show me a hipster)/i,
         template_id: 77139950
       },
       {
