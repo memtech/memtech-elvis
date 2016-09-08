@@ -49,7 +49,7 @@ module.exports = (robot) ->
     trigger:  /give camp|givecamp/i
 
   countdownTo
-    title:    "HACKmemphis is almost here!"
+    title:    "HACKmemphis"
     date:     '2016-09-23 18:00'
     link:     "http://www.hackmemphis.com/"
     trigger:  /hack memphis|hackmemphis/i
