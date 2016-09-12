@@ -41,6 +41,7 @@
 #   hubot Everyone's <text> And I'm just sitting here <text> - Spiderman
 #   hubot confusedgandalf <text> Confused Gandalf
 #   hubot eagle <text> Patriotic Eagle
+#   hubot show me a hipster - Hipster?
 #
 # Author:
 #   dylanwenzlau
@@ -62,6 +63,10 @@ module.exports = (robot) ->
       {
         regex: /aliens ()(.*)/i,
         template_id: 101470
+      },
+      {
+        regex: /(show me a hipster)/i,
+        template_id: 77139950
       },
       {
         regex: /grumpy cat ()(.*)/i,
