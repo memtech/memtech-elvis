@@ -61,7 +61,7 @@ module.exports = (robot) ->
     
   countdownTo
     title:    "MidsouthCon (Actual Date TBD)"
-    date:     "2017-3-17 17:00"
+    date:     "2017-3-24 17:00"
     link:     "http://www.midsouthcon.org"
     trigger:  /days until midsouthcon|midsouthcon/i
     
