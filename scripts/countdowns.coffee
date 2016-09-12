@@ -52,13 +52,13 @@ module.exports = (robot) ->
     title:    "HACKmemphis"
     date:     '2016-09-23 18:00'
     link:     "http://www.hackmemphis.com/"
-    trigger:  /hack memphis|hackmemphis/i
+    trigger:  /days until hack memphis|days until hackmemphis|hack memphis|hackmemphis/i
 
   countdownTo
     title:    "TechCamp Memphis (Actual Date TBD)"
     date:     '2016-11-07'
     link:     "http://techcampmemphis.org"
-    trigger:  /tech camp|techcamp/i
+    trigger:  /days until tech camp|days until techcamp|tech camp|techcamp/i
 
   countdownTo
     title:    "Christmas"
