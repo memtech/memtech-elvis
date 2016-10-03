@@ -15,15 +15,14 @@
 
 module.exports = (robot) ->
   JSON_SOURCE_URI = "https://raw.githubusercontent.com/memtech/people/gh-pages/js/locations.js"
-  REPO_URI = "https://github.com/memtech/people"
+  REPO_URI = "https://github.com/memtech/people/blob/gh-pages/js/locations.js"
   MAP_URI_BASE= "http://maps.google.com/maps?z=17&q="
 
   mapUri = (user) ->
     "#{MAP_URI_BASE}#{user.latitude},#{user.longitude}"
 
-  robot.respond /hometown (\w+)$/i, (msg) ->
+  robot.respond /hometown @?(\w+)$/i, (msg) ->
     username = msg.match[1]
-    console.log username
 
     msg.http(JSON_SOURCE_URI)
       .get() (err, res, body) ->
