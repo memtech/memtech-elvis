@@ -34,7 +34,7 @@ response = [
 
 module.exports = (robot) ->
   robot.respond /thank(s| you)/i, (msg) ->
-    msg.send msg.random response
-  thanks = new RegExp "thank(s| you) #{robot.name}", "i"
-  robot.hear thanks, (msg) ->
-msg.send msg.random response
+        msg.send msg.random response
+      thanks = new RegExp "thank(s| you) #{robot.name}", "i"
+      robot.hear thanks, (msg) ->
+          msg.send msg.random response
