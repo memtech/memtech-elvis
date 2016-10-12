@@ -21,6 +21,14 @@ module.exports = (robot) ->
   mapUri = (user) ->
     "#{MAP_URI_BASE}#{user.latitude},#{user.longitude}"
 
+  checkCompany = (company) ->
+    if company
+      company = company.trim()
+      companyString = ", and works at #{company}"
+    else
+      companyString = ""
+    companyString
+
   robot.respond /hometown @?(\w+)$/i, (msg) ->
     username = msg.match[1]
 
@@ -33,6 +41,6 @@ module.exports = (robot) ->
 
           for user in locations
             if user.slack_handle is username
-              return msg.send "#{user.name} hails from #{user.origin}! #{mapUri(user)}"
+              return msg.send "#{user.name} hails from #{user.origin}#{checkCompany(user.company)}! #{mapUri(user)}"
 
           msg.send "User #{username} not found.  Make sure there's a `slack_handle` listed for this user at #{REPO_URI}"
