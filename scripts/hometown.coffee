@@ -33,6 +33,6 @@ module.exports = (robot) ->
 
           for user in locations
             if user.slack_handle is username
-              return msg.send "#{user.name} hails from #{user.origin}! #{mapUri(user)}"
+              return msg.send "#{user.name} hails from #{user.origin} and currently works at #{user.company}! #{mapUri(user)}"
 
           msg.send "User #{username} not found.  Make sure there's a `slack_handle` listed for this user at #{REPO_URI}"
