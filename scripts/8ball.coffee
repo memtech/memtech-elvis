@@ -55,9 +55,9 @@ can =[
 
 
 module.exports = (robot) ->
-	robot.respond /should/i, (msg) ->
+	robot.respond /\bshould\b/i, (msg) ->
 		msg.send msg.random should
-	robot.respond /will/i, (msg) ->
+	robot.respond /\bwill\b/i, (msg) ->
 		msg.send msg.random will
-	robot.respond /can/i, (msg) -> 
+	robot.respond /\bcan\b/i, (msg) -> 
 		msg.send msg.random can
