@@ -335,4 +335,4 @@ module.exports = (robot) ->
     # twankle
     joke
       triggers: [/(intens|twank|dpritchett)/i]
-      responses: ["http://i.imgur.com/BNbENUP.gif"]
+      responses: ["http://i.imgur.com/BNbENUP.gif", "http://i.imgur.com/xuGliL0.gif"]
