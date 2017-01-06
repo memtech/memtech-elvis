@@ -8,5 +8,6 @@
   "hubot-slack-blacklist-middleware",
   "hubot-mimic",
   "hubot-markov",
-  "hubot-youtube"
+  "hubot-youtube",
+  "hubot-cleverbot"
 ]
