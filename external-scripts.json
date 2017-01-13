@@ -7,7 +7,6 @@
   "hubot-rules",
   "hubot-slack-blacklist-middleware",
   "hubot-mimic",
-  "hubot-markov",
   "hubot-youtube",
   "hubot-cleverbot"
 ]
