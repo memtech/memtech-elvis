@@ -15,25 +15,21 @@
 #   github.com/syliddar
 #
 
-criticism = [
-  "Whoops",
-  "My bad",
-  "I'll try harder next time.",
-
-]
-
-anger = [
+responses = [
+	"Whoops",
+	"My bad",
+	"I'll try harder next time.",
+	"sorrynotsorry",
 	":fire:",
 	":umad:",
 	":rageface:",
-	
+	":troll:",
+	":trollgold:",
+	":joshin:"
 ]
 
 module.exports = (robot) ->
-	robot.respond /gdi(,|)|wtf(,|)|damnit(,|)|you suck(,|)|you suck(,|)|(,|)no|fuck you(,|)/ig, (msg) ->
-		msg.send msg.random response
-    
-	thanks = new RegExp "(gg|well done(,|)|good job(,|)atta boy(,|)) @?#{robot.name}", "i"
-    
-	robot.hear thanks, (msg) ->
-		.send msg.random response
+	robot.respond /gdi|wtf|damnit|you suck|no|fuck you|god damn|damn/ig, (msg) ->
+		msg.send msg.random responses
+	shame = new RegExp "(gdi|wtf|damnit|you suck|no|fuck you|god damn|damn) @?#{robot.name}", "i"
+		msg.send msg.random responses
