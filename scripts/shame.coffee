@@ -19,7 +19,7 @@
 responses = ["Whoops",
 "My bad",
 "¯\_(ツ)_/¯",
-"",
+":(",
 "Sorry, I'll try harder next time.",
 "sorrynotsorry",
 ":fire:",
