@@ -36,8 +36,8 @@ responses = ["Whoops",
 ]
 
 module.exports = (robot) ->
-  robot.respond /gdi|wtf|damnit|you suck|no|fuck you|god damn|damn/ig, (msg) ->
+  robot.respond /gdi|wtf|damnit|dammit|you suck|no|fuck you|god damn|damn/ig, (msg) ->
     msg.send msg.random responses
-  shame = new RegExp "(gdi|wtf|damnit|you suck|no|fuck you|god damn|damn) @?#{robot.name}", "i"
+  shame = new RegExp "(gdi|wtf|damnit|dammit|you suck|no|fuck you|god damn|damn) @?#{robot.name}", "i"
   robot.hear shame, (msg) ->
     msg.send msg.random responses
