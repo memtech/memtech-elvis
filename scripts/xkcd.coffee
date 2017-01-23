@@ -21,7 +21,7 @@ module.exports = (robot) ->
     text.replace(/\s+/g, ' ').substr(0,400)
 
   robot.respond /xkcd(\s+latest)?$/i, (msg) ->
-    msg.http("http://xkcd.com/info.0.json")
+    msg.http("https://xkcd.com/info.0.json")
       .get() (err, res, body) ->
         if res.statusCode == 404
           msg.send 'Comic not found.'
@@ -32,7 +32,7 @@ module.exports = (robot) ->
   robot.respond /xkcd\s+(\d+)/i, (msg) ->
     num = "#{msg.match[1]}"
 
-    msg.http("http://xkcd.com/#{num}/info.0.json")
+    msg.http("https://xkcd.com/#{num}/info.0.json")
       .get() (err, res, body) ->
         if res.statusCode == 404
           msg.send 'Comic #{num} not found.'
@@ -41,7 +41,7 @@ module.exports = (robot) ->
           msg.send prune([object.title, object.img, object.alt].join(' '))
 
   robot.respond /xkcd\s+random/i, (msg) ->
-    msg.http("http://xkcd.com/info.0.json")
+    msg.http("https://xkcd.com/info.0.json")
           .get() (err,res,body) ->
             if res.statusCode == 404
                max = 0
