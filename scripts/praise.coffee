@@ -25,7 +25,7 @@ response = [
   "Happy to help!",
   "It's nice to be appreciated.",
   "I was feeling really down and this is just the encouragement I need to keep going.",
-  ""
+  "I don't always play games, but when I do, I play them well."
 ]
 
 module.exports = (robot) ->
