@@ -31,6 +31,6 @@ response = [
 module.exports = (robot) ->
   robot.respond /gg|ggwp|wp|well played|well done|good job|atta boy/i, (msg) ->
         msg.send msg.random response
-      thanks = new RegExp "(gg|ggwp|wp|well played(,|)|well done(,|)|good job(,|)atta boy(,|)) @?#{robot.name}", "i"
+      thanks = new RegExp "(gg|ggwp|wp|well played(,|)|well done(,|)|good job(,|)|atta boy(,|)) @?#{robot.name}", "i"
       robot.hear thanks, (msg) ->
           msg.send msg.random response
