@@ -81,7 +81,7 @@ available hubot plugins on [npmjs.com](npmjs) or by using `npm search`:
 
 To use a package, check the package's documentation, but in general it is:
 
-1. Use `npm install --save` to add the package to `package.json` and install it
+1. Use `yarn add` to add the package to `package.json` and install it
 2. Add the package name to `external-scripts.json` as a double quoted string
 
 You can review `external-scripts.json` to see what is included by default.
@@ -146,7 +146,7 @@ If you would like to run a non-Campfire or shell adapter you will need to add
 the adapter package as a dependency to the `package.json` file in the
 `dependencies` section.
 
-Once you've added the dependency with `npm install --save` to install it you
+Once you've added the dependency with `yarn add` to install it you
 can then run hubot with the adapter.
 
     % bin/hubot -a <adapter>
