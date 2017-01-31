@@ -24,12 +24,13 @@ response = [
   "I couldn't have done it without you.",
   "Happy to help!",
   "It's nice to be appreciated.",
-  "I was feeling really down and this is just the encouragement I need to keep going."
+  "I was feeling really down and this is just the encouragement I need to keep going.",
+  "I don't always play games, but when I do, I play them well."
 ]
 
 module.exports = (robot) ->
-  robot.respond /gg|well done|good job|atta boy/i, (msg) ->
+  robot.respond /gg|ggwp|wp|well played|well done|good job|atta boy/i, (msg) ->
         msg.send msg.random response
-      thanks = new RegExp "(gg|well done(,|)|good job(,|)atta boy(,|)) @?#{robot.name}", "i"
+      thanks = new RegExp "(gg|ggwp|wp|well played(,|)|well done(,|)|good job(,|)atta boy(,|)) @?#{robot.name}", "i"
       robot.hear thanks, (msg) ->
           msg.send msg.random response
