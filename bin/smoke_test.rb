@@ -28,6 +28,8 @@ def main
     puts results
 
     exit 1
+  else
+    puts "No fatal errors found.  Goodbye!"
   end
 end
 
