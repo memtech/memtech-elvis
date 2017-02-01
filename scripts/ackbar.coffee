@@ -1,4 +1,3 @@
-
 # Description:
 #   None
 #
@@ -34,6 +33,6 @@ ackbars = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /it[']?s a trap\b/i, (msg) ->
+  robot.respond /it[']?s a trap\b/i, (msg) ->
     msg.send msg.random ackbars
 
