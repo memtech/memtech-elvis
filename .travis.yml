@@ -1,7 +1,7 @@
-language: node_js:
+language: node_js
 services:
   - redis-server
 node_js:
   - "6.3.1"
 script:
-  yarn run test 
+  yarn run test
