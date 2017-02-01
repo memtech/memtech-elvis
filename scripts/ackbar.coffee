@@ -1,3 +1,19 @@
+
+# Description:
+#   None
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   it's a trap - Display an Admiral Ackbar piece of wonder
+#
+# Author:
+#   brilliantfantastic
+
 ackbars = [
   "http://i.imgur.com/OTByx1b.jpg",
   "http://farm4.static.flickr.com/3572/3637082894_e23313f6fb_o.jpg",
