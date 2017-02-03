@@ -6,7 +6,6 @@
   "hubot-redis-brain",
   "hubot-rules",
   "hubot-slack-blacklist-middleware",
-  "hubot-mimic",
   "hubot-youtube",
   "hubot-cleverbot"
 ]
