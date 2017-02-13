@@ -74,8 +74,8 @@ module.exports = (robot) ->
   countdownTo
     title:    "New Zeldar"
     date:     "2017-3-3 00:00"
-    link:     "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild"
-    trigger:  /days until zelda|new zelda/i
+    link:     "http://www.zelda.com/breath-of-the-wild/"
+    trigger:  /days until zelda|new zelda|countdown to zelda/i
   #countdownTo
   #  title:    "SuperLunch"
   #  date:     "2015-11-25 11:30"
