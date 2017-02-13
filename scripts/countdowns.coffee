@@ -43,9 +43,9 @@ module.exports = (robot) ->
   # timestamp docs: http://momentjs.com/docs/
 
   countdownTo
-    title:    "GiveCamp Memphis (Actual Date TBD)"
-    date:     '2016-02-20 18:00'
-    link:     "http://givecampmemphis.org @ Cowork Memphis"
+    title:    "GiveCamp Memphis"
+    date:     '2017-02-17 17:00'
+    link:     "http://givecampmemphis.org @ University of Memphis FIT"
     trigger:  /give camp|givecamp/i
 
   countdownTo
@@ -62,11 +62,11 @@ module.exports = (robot) ->
 
   countdownTo
     title:    "Christmas"
-    date:     '2016-12-25'
+    date:     '2017-12-25'
     trigger:  /days until christmas|christmas/i
     
   countdownTo
-    title:    "MidsouthCon 35"
+    title:    "MidsouthCon"
     date:     "2017-3-24 17:00"
     link:     "http://www.midsouthcon.org"
     trigger:  /days until midsouthcon|midsouthcon/i
