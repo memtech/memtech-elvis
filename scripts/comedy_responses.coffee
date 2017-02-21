@@ -331,3 +331,8 @@ module.exports = (robot) ->
     joke
       triggers: [/jelly/i]
       responses: ["https://s-media-cache-ak0.pinimg.com/736x/90/43/46/904346164bd4a464073c4d1a68a9abe3.jpg"]
+      
+    # twankle
+    joke
+      triggers: [/(intens|twank|dpritchett)/i]
+      responses: ["http://i.imgur.com/BNbENUP.gif", "http://i.imgur.com/xuGliL0.gif"]
