@@ -72,7 +72,7 @@ module.exports = (robot) ->
     trigger:  /days until midsouthcon|midsouthcon/i
     
   countdownTo
-    title:    "New Zeldar"
+    title:    ":triforce2: New Zeldar :triforce2:"
     date:     "2017-3-3 00:00"
     link:     "http://www.zelda.com/breath-of-the-wild/"
     trigger:  /days until zelda|new zelda|countdown to zelda/i
