@@ -81,16 +81,16 @@ module.exports = (robot) ->
     trigger:  /days until zelda|new zelda|countdown to zelda/i
 	
   countdownTo
-    title:    "You start caring"
-    date:     "275760-09-12 17:00"
-    link:     "¯\_(ツ)_/¯"
+    title:    "You giving even a single care"
+    date:     moment().add(1000, 'y')
+    link:     "  ¯\\_(ツ)_/¯  "
     trigger:  /days until I care|when will I care/i
 	
   countdownTo
     title:    "Google I/O"
     date:     "2017-05-17 8:00"
     link:     "https://events.google.com/io2017/"
-    trigger:  /days until I care|when will I care/i
+    trigger:  /days until googlecon|days until google io|when is googlecon|when is google io/i
 	
   countdownTo
     title:    "Microsoft BUILD"
