@@ -24,8 +24,11 @@ module.exports = (robot) ->
   timeUntil = (dateStamp) ->
     moment(dateStamp).fromNow()
 
+  #daysUntil = (dateStamp) ->
+  #  moment(dateStamp).diff(moment(), 'days')
+
   daysUntil = (dateStamp) ->
-    moment(dateStamp).diff(moment(), 'days')
+    moment(dateStamp).fromNow()
 
   countdownTo = (args) ->
     robot.respond args.trigger, (msg) ->
