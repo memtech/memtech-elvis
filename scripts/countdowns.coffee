@@ -24,14 +24,17 @@ module.exports = (robot) ->
   timeUntil = (dateStamp) ->
     moment(dateStamp).fromNow()
 
+  #daysUntil = (dateStamp) ->
+  #  moment(dateStamp).diff(moment(), 'days')
+
   daysUntil = (dateStamp) ->
-    moment(dateStamp).diff(moment(), 'days')
+    moment(dateStamp).fromNow()
 
   countdownTo = (args) ->
     robot.respond args.trigger, (msg) ->
       msg.send [
         args.title,
-        "happens in #{daysUntil(args.date)} days",
+        "happens #{daysUntil(args.date)}",
         "(#{humanDate(args.date)})",
         args.link
       ].join(' ')
@@ -72,7 +75,7 @@ module.exports = (robot) ->
     trigger:  /days until midsouthcon|midsouthcon/i
     
   countdownTo
-    title:    "New Zeldar"
+    title:    ":triforce2: New Zeldar :triforce2:"
     date:     "2017-3-3 00:00"
     link:     "http://www.zelda.com/breath-of-the-wild/"
     trigger:  /days until zelda|new zelda|countdown to zelda/i
