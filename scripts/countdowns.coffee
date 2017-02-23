@@ -34,7 +34,7 @@ module.exports = (robot) ->
     robot.respond args.trigger, (msg) ->
       msg.send [
         args.title,
-        "happens in #{daysUntil(args.date)} days",
+        "happens #{daysUntil(args.date)} days",
         "(#{humanDate(args.date)})",
         args.link
       ].join(' ')
