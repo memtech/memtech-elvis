@@ -81,8 +81,8 @@ module.exports = (robot) ->
     trigger:  /days until zelda|new zelda|countdown to zelda/i
 	
   countdownTo
-    title:    "You giving even a single care"
-    date:     moment().add(1000, 'y')
+    title:    "You begining to care"
+    date:      moment().add(Math.random() * (1000000 - 5000) + 5000, 'd')
     link:     "  ¯\\_(ツ)_/¯  "
     trigger:  /days until I care|when will I care/i
 	
