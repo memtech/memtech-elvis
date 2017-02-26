@@ -80,11 +80,16 @@ module.exports = (robot) ->
     link:     "http://www.zelda.com/breath-of-the-wild/"
     trigger:  /days until zelda|new zelda|countdown to zelda/i
 	
+  careTrigger = /days until I care|when will I care/i
   countdownTo
     title:    "You begining to care"
     date:      moment().add(Math.random() * (1000000 - 5000) + 5000, 'd')
     link:     "  ¯\\_(ツ)_/¯  "
-    trigger:  /days until I care|when will I care/i
+    trigger:  careTrigger
+
+  # the robot will fail the build if the assumptions documented as match assertions are false
+  robot.assertMatchesAs careTrigger, "days until I care lol", ["days until I care"]
+  robot.assertDoesNotMatch careTrigger, "days before I care"
 	
   countdownTo
     title:    "Google I/O"
