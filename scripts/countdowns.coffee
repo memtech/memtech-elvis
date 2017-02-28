@@ -97,7 +97,13 @@ module.exports = (robot) ->
     date:     "2017-05-10 8:00"
     link:     "https://build.microsoft.com/"
     trigger:  /days until MS Build|days until Build|when is MS Build|when is build/i
-	
+	 
+ countdownTo
+    title:    "Mass Effect: Andromeda"
+    date:     "2017-03-21 00:00"
+    link:     "https://www.masseffect.com"
+    trigger:  /days until Mass effect|days until andromeda|days until mass effect andromeda|when is Mass effect|when is andromeda|when is Mass Effect andromeda/i
+	 
   #countdownTo
   #  title:    "SuperLunch"
   #  date:     "2015-11-25 11:30"
