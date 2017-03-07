@@ -15,7 +15,7 @@ module.exports = (robot) ->
 	percent         = process.env.HUBOT_YOURMOM_PERCENT or 40
 
 	lastYourFace = {}
-	robot.hear /^([ \w]* )(is|was|has a|had a) ([ \w]+)[\.!]?$/, (message) ->
+	robot.hear /^([ \w]* )(is|was|has a|had a|looks like|looked like) ([ \w]+)[\.!]?$/, (message) ->
 		lower = message.match[1].toLowerCase()
 		if lower.indexOf("your mom") < 0 and lower.indexOf("how") < 0 and lower.indexOf("why") < 0 and lower.indexOf("wtf") < 0 and lower.indexOf("when") < 0 and lower.indexOf("where") < 0
 			yourFace = "Your mom " + message.match[2] + " " + message.match[3]
