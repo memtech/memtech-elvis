@@ -7,7 +7,7 @@
 # Commands:
 #   hubot should (X)
 #	hubot can (X)
-#	huboy will (X)
+#	hubot will (X)
 
 should = [	
 	"Without a doubt",
