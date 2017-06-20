@@ -1,7 +1,7 @@
 # Description:
 #   Hubot returns the status of a World of Warcraft server
 #
-# https://us.api.battle.net/wow/realm/status?locale=en_US&apikey=969wgh2ukfpu48wjuwcfz5shp4n5umzz
+#
 
 # Dependencies:
 #   None
@@ -14,8 +14,6 @@
 #
 # Author:
 #   github.com/unstablereality
-#
-#{"realms":[{"type":"pve","population":"medium","queue":false,"status":true,"name":"Proudmoore","slug":"proudmoore","battlegroup":"Bloodlust","locale":"en_US","timezone":"America/Los_Angeles","connected_realms":["proudmoore"]}]}
 
 module.exports = (robot) ->
     robot.respond /realm status (.*)/i, (msg)->
