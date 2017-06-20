@@ -19,11 +19,14 @@ module.exports = (robot) ->
     robot.respond /realm status (.*)/i, (msg)->
         realm = "#{msg.match[1]}"
         apiKey = process.env.BLIZZARD_API_KEY
-        msg.http("https://us.api.battle.net/wow/realm/status?locale=en_US&apikey=#{apiKey}&realms=#{realm}").get() (err, res, body) ->
-            if res.statusCode == 404
+        msg.http("https://us.api.battle.net/wow/realm/status?locale=en_US&apikey=969wgh2ukfpu48wjuwcfz5shp4n5umzz&realms=#{realm}").get() (err, res, body) ->
+            if res.statusCode != 200
                 msg.send "No response from API. Couldn't check the realm status. Try https://worldofwarcraft.com/en-us/game/status instead."
             else
                 object = JSON.parse(body)
-                realmname = object['realms'][0]['name']
-                status = if object['realms'][0]['status'] then "up" else "down"
-                msg.send "#{realmname} is currently #{status}."
+                if object['realms'][0]['name'].toLowerCase() == realm
+                    realmname = object['realms'][0]['name']
+                    status = if object['realms'][0]['status'] then "up" else "down"
+                    msg.send "#{realmname} is currently #{status}."
+                else
+                    msg.send "Looks like you didn't specify a valid realm name. Have you tried getting good?"
