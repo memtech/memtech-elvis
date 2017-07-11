@@ -24,7 +24,7 @@ module.exports = (robot) ->
                 msg.send "No response from API. Couldn't check the realm status. Try https://worldofwarcraft.com/en-us/game/status instead."
             else
                 object = JSON.parse(body)
-                if object['realms'][0]['name'].toLowerCase() == realm
+                if object['realms'][0]['name'].toLowerCase() == realm.toLowerCase()
                     realmname = object['realms'][0]['name']
                     status = if object['realms'][0]['status'] then "up" else "down"
                     msg.send "#{realmname} is currently #{status}."
