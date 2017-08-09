@@ -380,6 +380,12 @@ hubot-diagnostics@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/hubot-diagnostics/-/hubot-diagnostics-0.0.1.tgz#69aea01ae4dbdcf0512120c4e33e965ade55262c"
 
+hubot-giphy-gifme@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/hubot-giphy-gifme/-/hubot-giphy-gifme-1.0.0.tgz#4d58a7aa148ae6c0de277b87a2375d7c93ace739"
+  dependencies:
+    coffee-script "~1.6"
+
 hubot-google-images@^0.2.6:
   version "0.2.6"
   resolved "https://registry.yarnpkg.com/hubot-google-images/-/hubot-google-images-0.2.6.tgz#dd9f7032b8242e295c432ddbe91e438a3c7cab54"
