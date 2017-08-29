@@ -336,3 +336,8 @@ module.exports = (robot) ->
     joke
       triggers: [/(intens|twank|dpritchett)/i]
       responses: ["http://i.imgur.com/BNbENUP.gif", "http://i.imgur.com/xuGliL0.gif"]
+
+    # Joe Ferguson, the OG PHP Thug
+    joke
+      triggers: [/(php thug)/i]
+      responses: ["The OG PHP Thug: http://i.imgur.com/NCoCg9v.png"]
