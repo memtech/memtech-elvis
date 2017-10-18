@@ -341,3 +341,8 @@ module.exports = (robot) ->
     joke
       triggers: [/(php thug)/i]
       responses: ["The OG PHP Thug: http://i.imgur.com/NCoCg9v.png"]
+
+    # github repository
+    joke
+      triggers: [/(where do you live?|repository|github)/i]
+      responses: ["I live at https://github.com/memtech/memtech-elvis! Pull requests are welcome!"]
