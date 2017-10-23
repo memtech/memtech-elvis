@@ -369,6 +369,10 @@ http@*:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/http/-/http-0.0.0.tgz#86e6326d29c5d039de9fac584a45689f929f4f72"
 
+hubot-bitcoin@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/hubot-bitcoin/-/hubot-bitcoin-1.0.3.tgz#1fa0a5bce77e32587bc8217b1d8ebccd7a5f9a27"
+
 hubot-cleverbot@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/hubot-cleverbot/-/hubot-cleverbot-1.0.0.tgz#a7566cd30905fa0ce1db84515f19065668e4cd1e"
