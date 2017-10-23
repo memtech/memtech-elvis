@@ -346,3 +346,8 @@ module.exports = (robot) ->
     joke
       triggers: [/(where do you live?|repository|github)/i]
       responses: ["I live at https://github.com/memtech/memtech-elvis! Pull requests are welcome!"]
+
+    # miawws
+    joke
+      triggers: [/(how do I get the miawws|miaww|give me the kittens)/i]
+      responses: ["You too can receive a daily email full of kittens and doggos! Simply make a tax-deductible donation to http://wwww.miamemphis.org then message syliddar for verification."]
