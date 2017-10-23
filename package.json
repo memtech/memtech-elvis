@@ -6,6 +6,7 @@
   "description": "Elvis 2.0! He's back!",
   "dependencies": {
     "hubot": "^2.18.0",
+    "hubot-bitcoin": "^1.0.3",
     "hubot-cleverbot": "^1.0.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-giphy-gifme": "^1.0.0",
