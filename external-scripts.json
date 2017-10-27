@@ -7,5 +7,6 @@
   "hubot-rules",
   "hubot-slack-blacklist-middleware",
   "hubot-youtube",
-  "hubot-cleverbot"
+  "hubot-cleverbot",
+  "hubot-giphy-gifme"
 ]

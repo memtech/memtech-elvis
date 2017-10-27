@@ -336,3 +336,18 @@ module.exports = (robot) ->
     joke
       triggers: [/(intens|twank|dpritchett)/i]
       responses: ["http://i.imgur.com/BNbENUP.gif", "http://i.imgur.com/xuGliL0.gif"]
+
+    # Joe Ferguson, the OG PHP Thug
+    joke
+      triggers: [/(php thug)/i]
+      responses: ["The OG PHP Thug: http://i.imgur.com/NCoCg9v.png"]
+
+    # github repository
+    joke
+      triggers: [/(where do you live?|repository|github)/i]
+      responses: ["I live at https://github.com/memtech/memtech-elvis! Pull requests are welcome!"]
+
+    # miawws
+    joke
+      triggers: [/(how do I get the miawws|miaww|give me the kittens)/i]
+      responses: ["You too can receive a daily email full of kittens and doggos! Simply make a tax-deductible donation to http://wwww.miamemphis.org then message syliddar for verification."]
