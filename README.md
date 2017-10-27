@@ -10,6 +10,8 @@ This README is intended to help get you started. Definitely update and improve
 to talk about your own instance, how to use and deploy, what functionality he
 has, etc!
 
+
+
 [heroku]: http://www.heroku.com
 [hubot]: http://hubot.github.com
 [generator-hubot]: https://github.com/github/generator-hubot
@@ -180,10 +182,19 @@ If you would like to deploy to either a UNIX operating system or Windows.
 Please check out the [deploying hubot onto UNIX][deploy-unix] and [deploying
 hubot onto Windows][deploy-windows] wiki pages.
 
+#### Note for Ubuntu 16.04 LTS/Vagrant deployments
+You should ensure that you are using `node.js` version 6 or higher.  This process includes:
+1. `curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh`
+2. `sudo bash nodesource_setup.sh`
+3. `sudo apt-get install nodejs build-essential`
+4. `sudo npm install npm@latest -g`
+
 [heroku-node-docs]: http://devcenter.heroku.com/articles/node-js
 [deploy-heroku]: https://github.com/github/hubot/blob/master/docs/deploying/heroku.md
 [deploy-unix]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
 [deploy-windows]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
+
+
 
 ## Campfire Variables
 
