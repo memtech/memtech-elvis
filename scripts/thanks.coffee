@@ -33,7 +33,7 @@ response = [
 ]
 
 module.exports = (robot) ->
-  robot.respond /thank(s| you)/i, (msg) ->
+  robot.respond /thank(s\b| you)/i, (msg) ->
         msg.send msg.random response
       thanks = new RegExp "thank(s| you) @?#{robot.name}", "i"
       robot.hear thanks, (msg) ->
