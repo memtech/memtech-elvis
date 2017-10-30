@@ -47,30 +47,30 @@ module.exports = (robot) ->
 
   countdownTo
     title:    "GiveCamp Memphis (TBD)"
-    date:     '2018-02-17 17:00'
+    date:     '2018-02-16 17:00'
     link:     "http://givecampmemphis.org/"
     trigger:  /give camp|givecamp/i
 
   countdownTo
-    title:    "HACKmemphis"
-    date:     '2017-09-23 18:00'
+    title:    "HACKmemphis (TBD)"
+    date:     '2018-09-26 18:00'
     link:     "http://www.hackmemphis.com/"
-    trigger:  /days (Tentatively) until hack memphis|days until hackmemphis|hack memphis|hackmemphis/i
+    trigger:  /days until hack memphis|days until hackmemphis|hack memphis|hackmemphis/i
 
   countdownTo
-    title:    "TechCamp Memphis"
-    date:     '2017-10-28'
+    title:    "TechCamp Memphis (TBD)"
+    date:     '2018-10-26 08:00'
     link:     "http://techcampmemphis.org"
     trigger:  /days until tech camp|days until techcamp|tech camp|techcamp/i
 
   countdownTo
     title:    "Christmas"
-    date:     '2017-12-25'
+    date:     '2017-12-25 00:00'
     trigger:  /days until christmas|christmas/i
     
   countdownTo
     title:    "Thanksgiving"
-    date:     "2017-11-24"
+    date:     "2017-11-23 00:00"
     trigger:  /days until thanksgiving|thanksgiving /i
     
   countdownTo
