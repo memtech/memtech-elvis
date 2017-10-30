@@ -74,6 +74,11 @@ module.exports = (robot) ->
     trigger:  /days until thanksgiving|thanksgiving /i
     
   countdownTo
+    title:    "Valentine's Day"
+    date:     "2018-02-14 00:00"
+    trigger:  /days until v-day|v-day /i    
+    
+  countdownTo
     title:    "MidsouthCon"
     date:     "2018-03-09 17:00"
     link:     "http://www.midsouthcon.org"
