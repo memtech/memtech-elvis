@@ -15,6 +15,7 @@
 #   svpernova09
 #   basedgeek
 #   bkmontgomery
+#   mmccullar
 
 module.exports = (robot) ->
   robot.on 'register-responder-loaded', ->
@@ -88,7 +89,7 @@ module.exports = (robot) ->
     joke
       triggers: [/ostrich/i]
       responses: ["http://i.imgur.com/I7h5AA6.jpg"]
-      
+
     # Disappointed lance
     joke
       triggers: [/disappointed/i, /facepalm/i, /disappointed lance/i]
@@ -151,7 +152,7 @@ module.exports = (robot) ->
       note: 'fly, you fools!'
       triggers: [/\b(gandalf|hobbit|hobbits|orc|orcs|lotr|tolkein)\b/i]
       responses: ["https://www.youtube.com/watch?v=Sagg08DrO5U",
-                  "http://24.media.tumblr.com/tumblr_mbu6iap2uA1qc173ho4_250.gif", 
+                  "http://24.media.tumblr.com/tumblr_mbu6iap2uA1qc173ho4_250.gif",
                   "http://img3.wikia.nocookie.net/__cb20130106225013/lotr/images/4/40/GandalfVSBalrog.jpg",
                   "https://www.youtube.com/watch?v=AGF5ROpjRAU",
                   "https://www.youtube.com/watch?v=Nmn6Nl7YUa0",
@@ -167,7 +168,7 @@ module.exports = (robot) ->
       note: 'One ring to rule them all >> http://memtech.website/~dpritchett/webring_random.html >>'
       triggers: [/\b(web ring|webring)\b/i]
       responses: ["https://www.youtube.com/watch?v=fJlz6nEOT7w&t=0m44s",
-                  "https://www.youtube.com/watch?v=-UsrkoweVa4&t=1m25s", 
+                  "https://www.youtube.com/watch?v=-UsrkoweVa4&t=1m25s",
                   "https://33.media.tumblr.com/tumblr_lw6wmqA3Ov1qiy0obo1_500.gif",
                   "http://img1.wikia.nocookie.net/__cb20131010232524/lotr/images/3/3f/One_Ring_To_Rule_Them_All.gif"
       ]
@@ -301,12 +302,12 @@ module.exports = (robot) ->
     joke
       triggers: [/(zorro|gay blade)/i]
       responses: ["Meltheous is the gay blade! http://i.imgur.com/L3wS3SO.png"]
-     
-    # php famous  
+
+    # php famous
     joke
       triggers: [/php famous/i]
       responses: ["http://i.imgur.com/917zAnf.jpg"]
-      
+
     # what is best in life?
     joke
       triggers: [/what is best in life(\?|\!)*/i]
@@ -322,16 +323,16 @@ module.exports = (robot) ->
       triggers: [/unix/i]
       responses: ["http://media3.giphy.com/media/qIues2j3gHHGw/giphy.gif"]
 
-    # party hard  party hard  party hard  party hard 
+    # party hard  party hard  party hard  party hard
     joke
       triggers: [/party hard/i]
       responses: ["https://www.youtube.com/watch?v=5ztTZ_7wtVo"]
-    
+
     # jelly
     joke
       triggers: [/jelly/i]
       responses: ["https://s-media-cache-ak0.pinimg.com/736x/90/43/46/904346164bd4a464073c4d1a68a9abe3.jpg"]
-      
+
     # twankle
     joke
       triggers: [/(intens|twank|dpritchett)/i]
@@ -351,3 +352,23 @@ module.exports = (robot) ->
     joke
       triggers: [/(how do I get the miawws|miaww|give me the kittens)/i]
       responses: ["You too can receive a daily email full of kittens and doggos! Simply make a tax-deductible donation to http://wwww.miamemphis.org then message syliddar for verification."]
+
+    # power level
+    joke
+      triggers: [/what[']?s the power level/i]
+      responses: ["https://media.giphy.com/media/fijRLk7GeRsVa/giphy.gif"]
+
+    # all fired up
+    joke
+      triggers: [/all fired up|fired up now/i]
+      responses: ["https://media.giphy.com/media/12MUR0OphYswes/giphy.gif"]
+
+    # wheee! excited
+    joke
+      triggers: [/how excited (is|are) (he|him|her|she|they|them)?/i]
+      responses: ["http://i.imgur.com/8zMPb.gif"]
+
+    # automated jerbs
+    joke
+      triggers: [/show (me|us) automation|automate/i]
+      responses: ["http://i.imgur.com/iLQ5k4i.gifv"]
