@@ -33,6 +33,6 @@
     "test": "ruby ./bin/smoke_test.rb"
   },
   "engines": {
-    "node": "6.11.1"
+    "node": "6.12.3"
   }
 }

@@ -350,4 +350,4 @@ module.exports = (robot) ->
     # miawws
     joke
       triggers: [/(how do I get the miawws|miaww|give me the kittens)/i]
-      responses: ["You too can receive a daily email full of kittens and doggos! Simply make a tax-deductible donation to http://wwww.miamemphis.org then message syliddar for verification."]
+      responses: ["You too can receive a daily email full of kittens and doggos! Simply make a tax-deductible donation to http://www.miamemphis.org then message syliddar for verification."]
