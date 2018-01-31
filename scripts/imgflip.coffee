@@ -42,6 +42,7 @@
 #   hubot confusedgandalf <text> Confused Gandalf
 #   hubot eagle <text> Patriotic Eagle
 #   hubot show me a hipster - Hipster?
+#   hubot got any more of them <text>? - Tyrone Biggums
 #
 # Author:
 #   dylanwenzlau
@@ -208,6 +209,10 @@ module.exports = (robot) ->
       {
         regex: /eagle(.*)/i,
         template_id: 126770
+      },
+      {
+        regex: /(got any more of them) (.*)/i,
+        template_id: 13424299
       },
     ]
 
