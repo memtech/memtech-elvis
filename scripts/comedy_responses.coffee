@@ -351,3 +351,8 @@ module.exports = (robot) ->
     joke
       triggers: [/(how do I get the miawws|miaww|give me the kittens)/i]
       responses: ["You too can receive a daily email full of kittens and doggos! Simply make a tax-deductible donation to http://www.miamemphis.org then message syliddar for verification."]
+
+    # parrotwave
+    joke
+      triggers: [/(parrotwave|parrot wave)/i]
+      responses: [":parrotwave1::parrotwave2::parrotwave3::parrotwave4::parrotwave5::parrotwave6::parrotwave7:"]
