@@ -359,5 +359,5 @@ module.exports = (robot) ->
 
     # Gravity Forms (Praise Be) 
     joke
-      triggers: [/(gravity forms)/i]
+      triggers: [/(gravity forms|praise be)/i]
       responses: [":praisebe: Praise be. https://i.imgur.com/BdQR7HB.jpg"]
