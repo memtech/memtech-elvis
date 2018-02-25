@@ -356,3 +356,8 @@ module.exports = (robot) ->
     joke
       triggers: [/(parrotwave|parrot wave)/i]
       responses: [":parrotwave1::parrotwave2::parrotwave3::parrotwave4::parrotwave5::parrotwave6::parrotwave7:"]
+
+    # Gravity Forms (Praise Be) 
+    joke
+      triggers: [/(gravity forms)/i]
+      responses: [":praisebe: Praise be. https://i.imgur.com/BdQR7HB.jpg"]
