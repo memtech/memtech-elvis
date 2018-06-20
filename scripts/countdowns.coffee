@@ -58,7 +58,7 @@ module.exports = (robot) ->
     trigger:  /days until hack memphis|days until hackmemphis|hack memphis|hackmemphis/i
 
   countdownTo
-    title:    "TechCamp Memphis"
+    title:    "TechCamp Memphis (TBD)"
     date:     '2018-10-28'
     link:     "http://techcampmemphis.org"
     trigger:  /days until tech camp|days until techcamp|tech camp|techcamp/i
@@ -87,7 +87,7 @@ module.exports = (robot) ->
 	
   careTrigger = /days until I care|when will I care/i
   countdownTo
-    title:    "You begining to care"
+    title:    "You beginning to care"
     date:      moment().add(Math.random() * (1000000 - 5000) + 5000, 'd')
     link:     "  ¯\\_(ツ)_/¯  "
     trigger:  careTrigger
