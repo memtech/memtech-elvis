@@ -364,5 +364,5 @@ module.exports = (robot) ->
 
     # PHP THO
     joke
-      triggers: [/(joe|php tho|svpernova)/i]
+      triggers: [/(joe|php tho|svpernova|joe my god)/i]
       responses: ["https://i.imgur.com/1moUzGI.png"]
