@@ -199,6 +199,7 @@ module.exports = function(robot) {
   });
 
   robot.respond(/pokedex\s+(?!random)(\w+)/i, (msg) => {
+  robot.respond(/pokedex\s+(?!random)([a-zA-Z\-]+)/i, (msg) => {
     let pokedex = new PokeApi(robot);
     pokedex.getPokemonByName(msg.match[1]).then(pokemon => {
       msg.reply(pokemon);
