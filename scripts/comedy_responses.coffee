@@ -361,3 +361,8 @@ module.exports = (robot) ->
     joke
       triggers: [/(gravity forms|praise be)/i]
       responses: [":praisebe: Praise be. https://i.imgur.com/BdQR7HB.jpg"]
+
+    # PHP THO
+    joke
+      triggers: [/(joe|php tho|svpernova)/i]
+      responses: ["https://i.imgur.com/1moUzGI.png"]
