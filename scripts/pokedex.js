@@ -137,6 +137,7 @@ module.exports = function(robot) {
     getPokemonByName(name) {
       return new Promise((resolve, reject) => {
         let sanitized = name.replace(/\s+/, '-').replace(/[^a-zA-Z0-9 ]/, '').toLowerCase();
+        let sanitized = name.replace(/\s+/, '-').replace(/[^a-zA-Z0-9\- ]/, '').toLowerCase();
         robot.http(`https://pokeapi.co/api/v2/pokemon-species/${sanitized}/`)
           .get()((err, resp, body) => {
             if(err) {
