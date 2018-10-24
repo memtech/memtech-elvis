@@ -15,10 +15,10 @@
 #   github.com/Syliddar
 
 module.exports = (robot) ->
-  robot.respond /(delete that)/i, (msg)->
+  robot.respond /delete that/i, (msg)->
     slack delete last 1
     msg.send "Sorry about that."
-  robot.respond /(delete \d)/i, (msg) ->
+  robot.respond /delete (\d)/i, (msg) ->
     lines = msg.match[1]
     slack delete last lines
     msg.send "Sorry about that."
