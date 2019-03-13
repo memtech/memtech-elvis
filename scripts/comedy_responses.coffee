@@ -366,3 +366,8 @@ module.exports = (robot) ->
     joke
       triggers: [/(joe|php tho|svpernova|joe my god)/i]
       responses: ["https://i.imgur.com/1moUzGI.png"]
+
+    # The most important theory in all of Star Wars
+    joke
+      triggers: [/(who is the greatest Jedi|darth jar jar)/i]
+      responses: ["http://darthjarjar.com/original-theory-by-lumpawarroo/"]
