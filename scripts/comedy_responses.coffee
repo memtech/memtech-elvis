@@ -371,3 +371,8 @@ module.exports = (robot) ->
     joke
       triggers: [/(who is the greatest Jedi|darth jar jar)/i]
       responses: ["http://darthjarjar.com/original-theory-by-lumpawarroo/"]
+
+    # ABORK ABORK
+    joke
+      triggers: [/(abork mission|abork)/i]
+      responses: ["ABORK MISSION! ABORK! ABORK! https://i.imgur.com/C456Q8X.png"]
