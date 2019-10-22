@@ -376,3 +376,9 @@ module.exports = (robot) ->
     joke
       triggers: [/(abork mission|abork)/i]
       responses: ["ABORK MISSION! ABORK! ABORK! https://i.imgur.com/C456Q8X.png"]
+
+    # TONY IS A MEME
+    joke
+      triggers: [/(who is tony?)
+      responses: ["You mean @tony? https://i.imgur.com/CqrO7Gi.jpg"]
+
