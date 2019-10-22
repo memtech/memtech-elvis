@@ -379,6 +379,6 @@ module.exports = (robot) ->
 
     # TONY IS A MEME
     joke
-      triggers: [/(who is tony?)
+      triggers: [/(who is tony?)/i]
       responses: ["You mean @tony? https://i.imgur.com/CqrO7Gi.jpg"]
 
