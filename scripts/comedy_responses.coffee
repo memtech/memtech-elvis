@@ -369,7 +369,7 @@ module.exports = (robot) ->
 
     # The most important theory in all of Star Wars
     joke
-      triggers: [/(who is the greatest Jedi|darth jar jar)/i]
+      triggers: [/(who is the greatest Jedi|darth jar jar|have you ever heard the tale of darth jar jar)/i]
       responses: ["http://darthjarjar.com/original-theory-by-lumpawarroo/"]
 
     # ABORK ABORK
