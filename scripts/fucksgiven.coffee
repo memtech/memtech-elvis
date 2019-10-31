@@ -19,6 +19,7 @@ response = [
   "At least a Few.",
   "`Unhandled Exception: System.NullReferenceException: Object reference 'Fucks' not set to an instance of an object.`",
   "Several.",
+  "`NameError: name 'fucks' is not defined`",
 ]
 
 module.exports = (robot) ->
