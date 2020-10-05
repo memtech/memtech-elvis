@@ -1,21 +1,25 @@
-# Description:
-#   Who says you can't teach an old hound dog new tricks?
-#   Elvis will do a trick to settle all of your disputes
-#   Never toss a coin again.
-#
-# Dependencies:
-#   None
-#
-# Configuration:
-#   None
-#
-# Commands:
-#   hubot do a trick - Elvis attempts a trick and either succeeds or fails
+/*
+ * decaffeinate suggestions:
+ * DS102: Remove unnecessary code created because of implicit returns
+ * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
+ */
+// Description:
+//   Who says you can't teach an old hound dog new tricks?
+//   Elvis will do a trick to settle all of your disputes
+//   Never toss a coin again.
+//
+// Dependencies:
+//   None
+//
+// Configuration:
+//   None
+//
+// Commands:
+//   hubot do a trick - Elvis attempts a trick and either succeeds or fails
      
-random = (min,max) ->
-    Math.floor(Math.random() * (max - min + 1)) + min
+const random = (min, max) => Math.floor(Math.random() * ((max - min) + 1)) + min;
 
-description = [
+const description = [
   "a sick",
   "an insane",
   "a ballin ass",
@@ -26,9 +30,9 @@ description = [
   "a kind of lame",
   "an extreme",
   "a one of a kind"
-]
+];
 
-trick = [
+const trick = [
   "barrel roll",
   "540 backflip",
   "frontflip tailgrab",
@@ -48,9 +52,9 @@ trick = [
   "flying Karate kick at Kenpo master Ed Parker's dojo",
   "flying peanut butter and banana sandwich move",
   "pelvic thrust"
-]
+];
 
-result = [
+const result = [
   "nails it.",
   "dies.",
   "does a pretty good job.",
@@ -59,13 +63,11 @@ result = [
   "does such a terrible job that he leaves his family out of shame.",
   "does such a great job he writes a song about it.",
   "does so poorly that he gets slapped by the colonel"
-]
+];
 
-doTrick = -> "_attempts " + 
+const doTrick = () => "_attempts " + 
              description[random(0,description.length-1)] + " " + 
              trick[random(0,trick.length-1)] + " and " + 
-             result[random(0,result.length-1)] + "_"
+             result[random(0,result.length-1)] + "_";
 
-module.exports = (robot) ->
-  robot.respond /do a (trick|barrel roll)/i, (msg) ->
-    msg.emote doTrick()
+module.exports = robot => robot.respond(/do a (trick|barrel roll)/i, msg => msg.emote(doTrick()));

@@ -1,57 +1,66 @@
-# Description:
-#   Generates memes via the Imgflip Meme Generator API
-#
-# Dependencies:
-#   None
-#
-# Configuration:
-#   IMGFLIP_API_USERNAME [optional, overrides default imgflip_hubot account]
-#   IMGFLIP_API_PASSWORD [optional, overrides default imgflip_hubot account]
-#
-# Commands:
-#   hubot One does not simply <text> - Lord of the Rings Boromir
-#   hubot I don't always <text> but when i do <text> - The Most Interesting man in the World
-#   hubot aliens <text> - Ancient Aliens History Channel Guy
-#   hubot grumpy cat <text> - Grumpy Cat with text on the bottom
-#   hubot <text>, <text> everywhere - X, X Everywhere (Buzz and Woody from Toy Story)
-#   hubot Not sure if <text> or <text> - Futurama Fry
-#   hubot Y U NO <text> - Y U NO Guy
-#   hubot Brace yourselves <text> - Brace Yourselves X is Coming (Imminent Ned, Game of Thrones)
-#   hubot <text> all the <text> - X all the Y
-#   hubot <text> that would be great - Bill Lumbergh from Office Space
-#   hubot <text> too damn <text> - The rent is too damn high
-#   hubot Yo dawg <text> so <text> - Yo Dawg Heard You (Xzibit)
-#   hubot <text> you're gonna have a bad time - Super Cool Ski Instructor from South Park
-#   hubot Am I the only one around here <text> - The Big Lebowski
-#   hubot What if I told you <text> - Matrix Morpheus
-#   hubot <text> ain't nobody got time for that
-#   hubot <text> I guarantee it - George Zimmer
-#   hubot <text> and it's gone - South Park Banker Guy
-#   hubot <text> nobody bats an eye <text> everyone loses their minds - Heath Ledger Joker
-#   hubot back in my day <text> - Grumpy old man
-#   hubot Do you want <text>? Because that's how you get <text> - Archer
-#   hubot say <text> one more goddamn time <text> - Jules Winnfield
-#   hubot <text> Fuck Me Right - superbad
-#   hubot <text> But that's none of my business - Kermit
-#   hubot <text> WTF jackie chan
-#   hubot <text> that's what I call takin' care of business - The King
-#   hubot It look like a <text> to me everybody seen the <text> say yeah - Leprechaun guy
-#   hubot Your <text> and you should feel <text> - Zoidberg
-#   hubot One <text> please - Zoidberg
-#   hubot Everyone's <text> And I'm just sitting here <text> - Spiderman
-#   hubot confusedgandalf <text> Confused Gandalf
-#   hubot eagle <text> Patriotic Eagle
-#   hubot show me a hipster - Hipster?
-#   hubot got any more of them <text>? - Tyrone Biggums
-#
-# Author:
-#   dylanwenzlau
+/*
+ * decaffeinate suggestions:
+ * DS101: Remove unnecessary use of Array.from
+ * DS102: Remove unnecessary code created because of implicit returns
+ * DS207: Consider shorter variations of null checks
+ * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
+ */
+// Description:
+//   Generates memes via the Imgflip Meme Generator API
+//
+// Dependencies:
+//   None
+//
+// Configuration:
+//   IMGFLIP_API_USERNAME [optional, overrides default imgflip_hubot account]
+//   IMGFLIP_API_PASSWORD [optional, overrides default imgflip_hubot account]
+//
+// Commands:
+//   hubot One does not simply <text> - Lord of the Rings Boromir
+//   hubot I don't always <text> but when i do <text> - The Most Interesting man in the World
+//   hubot aliens <text> - Ancient Aliens History Channel Guy
+//   hubot grumpy cat <text> - Grumpy Cat with text on the bottom
+//   hubot <text>, <text> everywhere - X, X Everywhere (Buzz and Woody from Toy Story)
+//   hubot Not sure if <text> or <text> - Futurama Fry
+//   hubot Y U NO <text> - Y U NO Guy
+//   hubot Brace yourselves <text> - Brace Yourselves X is Coming (Imminent Ned, Game of Thrones)
+//   hubot <text> all the <text> - X all the Y
+//   hubot <text> that would be great - Bill Lumbergh from Office Space
+//   hubot <text> too damn <text> - The rent is too damn high
+//   hubot Yo dawg <text> so <text> - Yo Dawg Heard You (Xzibit)
+//   hubot <text> you're gonna have a bad time - Super Cool Ski Instructor from South Park
+//   hubot Am I the only one around here <text> - The Big Lebowski
+//   hubot What if I told you <text> - Matrix Morpheus
+//   hubot <text> ain't nobody got time for that
+//   hubot <text> I guarantee it - George Zimmer
+//   hubot <text> and it's gone - South Park Banker Guy
+//   hubot <text> nobody bats an eye <text> everyone loses their minds - Heath Ledger Joker
+//   hubot back in my day <text> - Grumpy old man
+//   hubot Do you want <text>? Because that's how you get <text> - Archer
+//   hubot say <text> one more goddamn time <text> - Jules Winnfield
+//   hubot <text> Fuck Me Right - superbad
+//   hubot <text> But that's none of my business - Kermit
+//   hubot <text> WTF jackie chan
+//   hubot <text> that's what I call takin' care of business - The King
+//   hubot It look like a <text> to me everybody seen the <text> say yeah - Leprechaun guy
+//   hubot Your <text> and you should feel <text> - Zoidberg
+//   hubot One <text> please - Zoidberg
+//   hubot Everyone's <text> And I'm just sitting here <text> - Spiderman
+//   hubot confusedgandalf <text> Confused Gandalf
+//   hubot eagle <text> Patriotic Eagle
+//   hubot show me a hipster - Hipster?
+//   hubot got any more of them <text>? - Tyrone Biggums
+//
+// Author:
+//   dylanwenzlau
 
 
-inspect = require('util').inspect
+const {
+  inspect
+} = require('util');
 
-module.exports = (robot) ->
-  unless robot.brain.data.imgflip_memes?
+module.exports = function(robot) {
+  if (robot.brain.data.imgflip_memes == null) {
     robot.brain.data.imgflip_memes = [
       {
         regex: /(one does not simply) (.*)/i,
@@ -179,7 +188,7 @@ module.exports = (robot) ->
       },
       {
         regex: /(.* is the way to go)/i,
-        line2After: "call 683-7000"
+        line2After: "call 683-7000",
         template_id: 22783973
       },
       {
@@ -214,43 +223,49 @@ module.exports = (robot) ->
         regex: /(got any more of them) (.*)/i,
         template_id: 13424299
       },
-    ]
+    ];
+  }
 
-  for meme in robot.brain.data.imgflip_memes
-    setupResponder robot, meme
+  return Array.from(robot.brain.data.imgflip_memes).map((meme) =>
+    setupResponder(robot, meme));
+};
 
-setupResponder = (robot, meme) ->
-  robot.respond meme.regex, (msg) ->
-    generateMeme msg, meme.template_id,
-      [meme.line1Before, msg.match[1], meme.line1After].join(' ').trim(),
-      [meme.line2Before, msg.match[2], meme.line2After].join(' ').trim()
+var setupResponder = (robot, meme) => robot.respond(meme.regex, msg => generateMeme(msg, meme.template_id,
+  [meme.line1Before, msg.match[1], meme.line1After].join(' ').trim(),
+  [meme.line2Before, msg.match[2], meme.line2After].join(' ').trim()));
 
-generateMeme = (msg, template_id, text0, text1) ->
-  username = process.env.IMGFLIP_API_USERNAME
-  password = process.env.IMGFLIP_API_PASSWORD
+var generateMeme = function(msg, template_id, text0, text1) {
+  const username = process.env.IMGFLIP_API_USERNAME;
+  const password = process.env.IMGFLIP_API_PASSWORD;
 
-  if (username or password) and not (username and password)
-    msg.reply 'To use your own Imgflip account, you need to specify username and password!'
-    return
+  if ((username || password) && !(username && password)) {
+    msg.reply('To use your own Imgflip account, you need to specify username and password!');
+    return;
+  }
 
-  msg.http('https://api.imgflip.com/caption_image')
-  .query
-      template_id: template_id,
-      username: username,
-      password: password,
-      text0: text0,
-      text1: text1
-  .post() (error, res, body) ->
-    if error
-      msg.reply "I got an error when talking to imgflip:", inspect(error)
-      return
+  return msg.http('https://api.imgflip.com/caption_image')
+  .query({
+      template_id,
+      username,
+      password,
+      text0,
+      text1}).post()(function(error, res, body) {
+    if (error) {
+      msg.reply("I got an error when talking to imgflip:", inspect(error));
+      return;
+    }
 
-    result = JSON.parse(body)
-    success = result.success
-    errorMessage = result.error_message
+    const result = JSON.parse(body);
+    const {
+      success
+    } = result;
+    const errorMessage = result.error_message;
 
-    if not success
-      msg.reply "Imgflip API request failed: #{errorMessage}"
-      return
+    if (!success) {
+      msg.reply(`Imgflip API request failed: ${errorMessage}`);
+      return;
+    }
 
-    msg.send result.data.url
+    return msg.send(result.data.url);
+  });
+};
