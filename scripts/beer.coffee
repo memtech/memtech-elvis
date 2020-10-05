@@ -20,7 +20,7 @@ module.exports = (robot) ->
   robot.respond /(beer status)|(@Syliddar beer status)|(how's my beer)|(how's @Syliddar's beer)|(how is my beer)|(how is @Syiliddar's beer)/i, (msg)->
     msg.http("https://beer.jmyers.tech").get() (err, res, body) ->
       if res.statusCode != 200
-        msg.send "No response. Couldn't check the beer status."
+        msg.send "No response. Maybe @Syliddar should fix his beer site."
       else
         object = JSON.parse(body)
         msg.send "Latest sensor data for #{data.beer_name}. SG: #{data.sg}; Temp: #{data.temp}; Sensor reading taken on #{humanDate(data.time)}"
