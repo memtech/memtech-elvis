@@ -1,3 +1,5 @@
+// TODO: This file was created by bulk-decaffeinate.
+// Sanity-check the conversion and remove this comment.
 /*
  * decaffeinate suggestions:
  * DS101: Remove unnecessary use of Array.from
@@ -63,7 +65,7 @@ module.exports = function(robot) {
             if (meetup.venue != null) { resp += `@${meetup.venue.name} `; }
 
             // provide generic meetup link if no keywords were supplied
-            if (!!keyword.length) {
+            if (keyword.length) {
               resp += `(${base_url}${escape(keyword)})`;
             } else {
               resp += `(${meetup.event_url})`;
