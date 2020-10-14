@@ -117,33 +117,54 @@ module.exports = function(robot) {
     getPokemonByName(name) {
       return new Promise((resolve, reject) => {
         let sanitized = name.replace(/\s+/, '-').replace(/[^a-zA-Z0-9\- ]/, '').toLowerCase();
-        robot.http(`https://pokeapi.co/api/v2/pokemon-species/${sanitized}/`)
-          .get()((err, resp, body) => {
-            if(err) {
-              reject(new Error(error));
-            } else {
-              const data = JSON.parse(body);
-              this.buildPokedexEntry(data).then(pokedexEntry => {
-                resolve(pokedexEntry);
-              });
-            }
-          });
+        let nameId = this.robot.brain.get(`pokedex-${sanitized}`);
+        if(nameId) {
+          let pokedexEntry = this.robot.brain.get(`pokedex-${nameId}`);
+          resolve(pokedexEntry);
+        } else {
+          robot.http(`https://pokeapi.co/api/v2/pokemon-species/${sanitized}/`)
+            .get()((err, resp, body) => {
+              if (err) {
+                reject(new Error(error));
+              } else {
+                const data = JSON.parse(body);
+                let pokemonId = data.id;
+                this.robot.brain.set(`pokedex-${sanitized}`, pokemonId);
+                let entryInCache = this.robot.brain.get(`pokedex-${pokemonId}`);
+                if(entryInCache) {
+                  resolve(entryInCache);
+                } else {
+                  this.buildPokedexEntry(data).then(pokedexEntry => {
+                    this.robot.brain.set(`pokedex-${pokemonId}`, pokedexEntry);
+                    resolve(pokedexEntry);
+                  });
+                }
+              }
+            });
+        }
       });
     }
 
     getPokemonByNumber(number) {
       return new Promise((resolve, reject) => {
-        robot.http(`https://pokeapi.co/api/v2/pokemon-species/${number}/`)
-          .get()((err, resp, body) => {
-            if(err) {
-              reject(new Error(err));
-            } else {
-              const data = JSON.parse(body);
-              this.buildPokedexEntry(data).then(pokedexEntry => {
-                resolve(pokedexEntry);
-              });
-            }
-          });
+        let url = `https://pokeapi.co/api/v2/pokemon-species/${number}/`;
+        let dataInCache =  this.robot.brain.get(`pokedex-${number}`);
+        if(dataInCache) {
+          resolve(dataInCache);
+        } else {
+          robot.http(`https://pokeapi.co/api/v2/pokemon-species/${number}/`)
+            .get()((err, resp, body) => {
+              if (err) {
+                reject(new Error(err));
+              } else {
+                const data = JSON.parse(body);
+                this.buildPokedexEntry(data).then(pokedexEntry => {
+                  this.robot.brain.set(`pokedex-${number}`, pokedexEntry);
+                  resolve(pokedexEntry);
+                });
+              }
+            });
+        }
       });
     }
 

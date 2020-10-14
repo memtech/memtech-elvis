@@ -20,6 +20,8 @@
 response = [
   "you're welcome",
   "no problem",
+  "you're amazing",
+  "you're the best",
   "not a problem",
   "no problem at all",
   "don’t mention it",
