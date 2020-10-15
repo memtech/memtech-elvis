@@ -366,3 +366,22 @@ module.exports = (robot) ->
     joke
       triggers: [/(joe|php tho|svpernova|joe my god)/i]
       responses: ["https://i.imgur.com/1moUzGI.png"]
+
+    # The most important theory in all of Star Wars
+    joke
+      triggers: [/(who is the greatest Jedi|darth jar jar|have you ever heard the tale of darth jar jar)/i]
+      responses: ["http://darthjarjar.com/original-theory-by-lumpawarroo/"]
+
+    # ABORK ABORK
+    joke
+      triggers: [/(abork mission|abork)/i]
+      responses: ["ABORK MISSION! ABORK! ABORK! https://i.imgur.com/C456Q8X.png"]
+
+    # TONY IS A MEME
+    joke
+      triggers: [/(who is tony?)/i]
+      responses: [
+        "You mean @tony? https://i.imgur.com/CqrO7Gi.jpg",
+        "You mean @tony? https://i.imgur.com/DqFvAyj.png"
+      ]
+
