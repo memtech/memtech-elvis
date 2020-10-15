@@ -20,14 +20,16 @@ const getNews = (robot, topic) => {
                 }
 
                 if(data.totalResults > 0) {
-                        
+
                     data.articles.forEach(article => {
                         response += `\n Source: ${article.source.name} \n`
                         response += ` Title: ${article.title} \n`
                         response += ` Url: ${article.url}`
                     })
+
                 } else {
                     response += `No news found for the topic: ${topic}`
+
                 }
 
                 resolve(response)

@@ -66,7 +66,7 @@ get started, along with the [Scripting Guide](scripting-docs).
 For many common tasks, there's a good chance someone has already one to do just
 the thing.
 
-[scripting-docs]: https://github.com/github/hubot/blob/master/docs/scripting.md
+[scripting-docs]: https://github.com/hubotio/hubot/blob/master/docs/scripting.md
 
 ### external-scripts
 
@@ -75,7 +75,7 @@ writing it yourself, you can use existing plugins.
 
 Hubot is able to load plugins from third-party `npm` packages. This is the
 recommended way to add functionality to your hubot. You can get a list of
-available hubot plugins on [npmjs.com](npmjs) or by using `npm search`:
+available hubot plugins on [npmjs](npmjs) or by using `npm search`:
 
     % npm search hubot-scripts panda
     NAME             DESCRIPTION                        AUTHOR DATE       VERSION KEYWORDS
@@ -89,6 +89,8 @@ To use a package, check the package's documentation, but in general it is:
 2. Add the package name to `external-scripts.json` as a double quoted string
 
 You can review `external-scripts.json` to see what is included by default.
+
+[npmjs]: https://www.npmjs.com
 
 ##### Advanced Usage
 
@@ -109,8 +111,6 @@ the `hubot-fun` plugin, but all four of those in `hubot-auto-deploy`.
 
 **Be aware that not all plugins support this usage and will typically fallback
 to including all scripts.**
-
-[npmjs]: https://www.npmjs.com
 
 ### hubot-scripts
 
@@ -192,7 +192,7 @@ You should ensure that you are using `node.js` version 6 or higher.  This proces
 [heroku-node-docs]: http://devcenter.heroku.com/articles/node-js
 [deploy-heroku]: https://github.com/github/hubot/blob/master/docs/deploying/heroku.md
 [deploy-unix]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
-[deploy-windows]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
+[deploy-windows]: https://github.com/github/hubot/blob/master/docs/deploying/windows.md
 
 
 

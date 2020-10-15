@@ -6,29 +6,51 @@
   "description": "Elvis 2.0! He's back!",
   "dependencies": {
     "hubot": "^2.18.0",
+    // tells you the price of bitcoin, last updated 6 years ago
     "hubot-bitcoin": "^1.0.3",
+    // makes elvis talk back, last updated 4 years ago
     "hubot-cleverbot": "^1.0.0",
+    // adds ping, adapter, echo <text>, time scripts, last updated 3 years ago
     "hubot-diagnostics": "0.0.1",
+    // uhh, gifs, duh, last updated 4 years ago
     "hubot-giphy-gifme": "^1.0.0",
+    // fetches google images, last updated 3 years ago
     "hubot-google-images": "^0.2.6",
+    // translates stuff, last updated 3 years ago
     "hubot-google-translate": "^0.2.0",
+    // shows the help menu, last updated 3 years ago
     "hubot-help": "^0.1.3",
+    // keeps the heroku free dyno alive, last updated 3 years ago
     "hubot-heroku-keepalive": "^1.0.2",
+    // fetches google maps, last updated 3 years ago
     "hubot-maps": "0.0.2",
+    // got annoying, last updated 2 months ago, can get rid of
     "hubot-markov": "^1.7.0",
+    // more markov madness, last updated 5 years ago
     "hubot-mimic": "~0.1.2",
+    // fetches pics of pugs, last updated 3 years ago
     "hubot-pugme": "^0.1.0",
+    // makes Elvis smarter via redis, last updated 3 years ago
     "hubot-redis-brain": "0.0.3",
+    // robot and dev rules, last updated 3 years ago
     "hubot-rules": "^0.1.1",
+    // community scripts, deprecated, last updated 4 years ago
     "hubot-scripts": "^2.16.2",
+    // shipit meme, last updated 3 years ago
     "hubot-shipit": "^0.2.0",
+    // slack adapter, last updated 2 months ago
     "hubot-slack": "4.5.1",
+    // keeps Elvis out of #general, last updated 5 years ago
     "hubot-slack-blacklist-middleware": "^1.0.2",
+    // lets Elvis delete his last message, last updated 2 years ago
     "hubot-slack-utils": "0.0.5",
+    // inverse of the blacklist, last updated 5 years ago
     "hubot-slack-whitelist-middleware": "^1.0.1",
+    // searches youtube, last updated 2 years ago
     "hubot-youtube": "^1.0.2",
-    "lodash": "^4.17.4",
-    "moment": "^2.12.0"
+    "lodash": "^4.17.19",
+    // time stuff, deprecated
+    "moment": "^2.19.3"
   },
   "scripts": {
     "test": "ruby ./bin/smoke_test.rb"
