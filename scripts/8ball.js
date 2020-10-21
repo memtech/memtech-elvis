@@ -1,15 +1,15 @@
-# Description:
-#   A handy little hubot script that lets hubot gives you "Quality" advice
-#
-# Author:
-#	Syliddar
-#
-# Commands:
-#   hubot should (X)
-#	hubot can (X)
-#	hubot will (X)
+// Description:
+//   A handy little hubot script that lets hubot gives you "Quality" advice
+//
+// Author:
+//	Syliddar
+//
+// Commands:
+//   hubot should (X)
+//	hubot can (X)
+//	hubot will (X)
 
-should = [	
+const should = [	
 	"Without a doubt",
 	"Yes, definitely",	
 	"Yes",
@@ -21,9 +21,9 @@ should = [
 	"My reply is no",
 	"Absolutely not",
 	"My sources say no"	
-]
+];
 
-will =[
+const will =[
 	"Cannot predict now",	
 	"As I see it, yes",
 	"Most likely",
@@ -34,9 +34,9 @@ will =[
 	"Signs point to yes",
 	"Outlook not so good",
 	"Very doubtful"
-]
+];
 
-can =[
+const can =[
 	"Cannot predict now",	
 	"As I see it, yes",
 	"Signs point to yes",
@@ -51,13 +51,11 @@ can =[
 	"Absolutely not",
 	"Outlook not so good",
 	"Very doubtful"	
-]
+];
 
 
-module.exports = (robot) ->
-	robot.respond /\bshould\b/i, (msg) ->
-		msg.send msg.random should
-	robot.respond /\bwill\b/i, (msg) ->
-		msg.send msg.random will
-	robot.respond /\bcan\b/i, (msg) -> 
-		msg.send msg.random can
+module.exports = function(robot) {
+	robot.respond(/\bshould\b/i, msg => msg.send(msg.random(should)));
+	robot.respond(/\bwill\b/i, msg => msg.send(msg.random(will)));
+	return robot.respond(/\bcan\b/i, msg => msg.send(msg.random(can)));
+};

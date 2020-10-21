@@ -1,19 +1,19 @@
-# Description:
-#   None
-#
-# Dependencies:
-#   None
-#
-# Configuration:
-#   None
-#
-# Commands:
-#   it's a trap - Display an Admiral Ackbar piece of wonder
-#
-# Author:
-#   brilliantfantastic
+// Description:
+//   None
+//
+// Dependencies:
+//   None
+//
+// Configuration:
+//   None
+//
+// Commands:
+//   it's a trap - Display an Admiral Ackbar piece of wonder
+//
+// Author:
+//   brilliantfantastic
 
-ackbars = [
+const ackbars = [
   "http://i.imgur.com/OTByx1b.jpg",
   "http://farm4.static.flickr.com/3572/3637082894_e23313f6fb_o.jpg",
   "http://6.asset.soup.io/asset/0610/8774_242b_500.jpeg",
@@ -30,9 +30,7 @@ ackbars = [
   "http://farm2.staticflickr.com/1440/5170210261_fddb4c480c_z.jpg",
   "http://fashionablygeek.com/wp-content/uploads/2010/02/its-a-mouse-trap.jpg?cb5e28",
   "http://31.media.tumblr.com/tumblr_lmn8d1xFXN1qjs7yio1_500.jpg"
-]
+];
 
-module.exports = (robot) ->
-  robot.respond /it[']?s a trap\b/i, (msg) ->
-    msg.send msg.random ackbars
+module.exports = robot => robot.respond(/it[']?s a trap\b/i, msg => msg.send(msg.random(ackbars)));
 
