@@ -1,8 +1,3 @@
-/*
- * decaffeinate suggestions:
- * DS102: Remove unnecessary code created because of implicit returns
- * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
- */
 // Description:
 //   Hubot graciously accepts praise for his actions
 //   http://www.macmillandictionary.com/thesaurus-category/british/Ways-of-accepting-someone-s-thanks

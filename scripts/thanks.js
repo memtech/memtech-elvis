@@ -1,9 +1,3 @@
-/*
- * decaffeinate suggestions:
- * DS102: Remove unnecessary code created because of implicit returns
- * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
- */
-
 // Description:
 //   Hubot responds any thank message politely. Phrases from:
 //   http://www.macmillandictionary.com/thesaurus-category/british/Ways-of-accepting-someone-s-thanks
